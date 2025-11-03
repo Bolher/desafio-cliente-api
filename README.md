@@ -71,7 +71,9 @@ LOG_LEVEL=info
 Crie um .env como no do exemplo
 
 2️⃣ Subir containers:
+```bash
 docker compose up -d --build
+```
 
 3️⃣ Testar API:
 http://localhost:3000/health
