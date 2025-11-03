@@ -68,13 +68,13 @@ LOG_LEVEL=info
 ## 🐳 Subindo o projeto com Docker
 
 
-# 1️⃣ Copiar arquivo de ambiente
+1️⃣ Copiar arquivo de ambiente
 Crie um .env como no do exemplo
 
-# 2️⃣ Subir containers
+2️⃣ Subir containers
 docker compose up -d --build
 
-# 3️⃣ Testar API
+3️⃣ Testar API
 http://localhost:3000/health
 # Saída esperada: {"ok":true}
 
@@ -86,12 +86,12 @@ http://localhost:3000/health
 
 Base URL: http://localhost:3000
 
-Método	Endpoint	        Descrição
-POST	/api/clients	    Cadastrar um novo cliente
-PUT	    /api/clients/:id	Atualizar dados do cliente
-GET	    /api/clients/:id	Consultar cliente por ID (usa cache Redis)
-GET	    /api/clients	    Listar todos os clientes
-GET	    /health	            Healthcheck da API
+Método	  Endpoint	            Descrição
+POST	     /api/clients	         Cadastrar um novo cliente
+PUT	     /api/clients/:id	   Atualizar dados do cliente
+GET	     /api/clients/:id	   Consultar cliente por ID (usa cache Redis)
+GET	     /api/clients	         Listar todos os clientes
+GET	     /health	            Healthcheck da API
 
 
 ---
