@@ -1,7 +1,7 @@
 # 🚀 Cliente API — Clean Architecture (Node + TypeScript + Docker)
 
 Um serviço REST completo para **cadastro e consulta de clientes**, desenvolvido com **Node.js + TypeScript**, aplicando **Clean Architecture**, **SOLID**, **MongoDB**, **Redis (cache)**, **RabbitMQ (mensageria)** e **Docker Compose**.  
-Inclui **validação com Zod**, **testes unitários com Jest**, **Swagger (opcional)**.
+Inclui **validação com Zod**, **testes unitários com Jest**, **Swagger**.
 
 ---
 
