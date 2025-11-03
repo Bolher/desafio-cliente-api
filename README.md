@@ -16,7 +16,6 @@ Inclui **validação com Zod**, **testes unitários com Jest**, **Swagger (opcio
 | **Testes** | Jest + ts-jest |
 | **Validação** | Zod |
 | **Containerização** | Docker + Docker Compose |
-| **CI/CD** | GitHub Actions |
 | **Documentação (opcional)** | Swagger UI |
 
 ---
