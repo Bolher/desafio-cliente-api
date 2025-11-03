@@ -45,6 +45,7 @@ tests/                      # Testes unitários (use-cases e repositórios)
 ```
 ## 🏗️ Exemplo de .env
 
+```bash
 API
 PORT=3000
 
@@ -61,7 +62,7 @@ RABBITMQ_QUEUE=clientes.created
 
 Logs (opcional)
 LOG_LEVEL=info
-
+```
 ---
 
 ## 🐳 Subindo o projeto com Docker
