@@ -106,7 +106,7 @@ http://localhost:3000/health
 
 ---
 
-##🧪 Testes Unitários
+## 🧪 Testes Unitários
 
 
 ```bash
@@ -117,7 +117,7 @@ npm test
 ```
 ---
 
-##📨 Mensageria — RabbitMQ
+## 📨 Mensageria — RabbitMQ
 
 Ao cadastrar um novo cliente (POST /api/clients), o sistema publica uma mensagem na fila clientes.created.
 
