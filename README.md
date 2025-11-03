@@ -67,13 +67,13 @@ LOG_LEVEL=info
 ## 🐳 Subindo o projeto com Docker
 
 
-1️⃣ Copiar arquivo de ambiente
+1️⃣ Copiar arquivo de ambiente:
 Crie um .env como no do exemplo
 
-2️⃣ Subir containers
+2️⃣ Subir containers:
 docker compose up -d --build
 
-3️⃣ Testar API
+3️⃣ Testar API:
 http://localhost:3000/health
 # Saída esperada: {"ok":true}
 
