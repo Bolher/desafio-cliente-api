@@ -1,0 +1,53 @@
+services:
+  api:
+    build: .
+    container_name: cliente-api
+    depends_on:
+      mongo:
+        condition: service_started
+      redis:
+        condition: service_started
+      rabbitmq:
+        condition: service_healthy         # <<< espere o Rabbit ficar saudável
+    environment:
+      - PORT=3000
+      - MONGO_URI=mongodb://mongo:27017/clientesdb
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - RABBITMQ_URL=amqp://user:pass@rabbitmq:5672   # <<< use o novo usuário
+      - RABBITMQ_QUEUE=clientes.created
+    ports:
+      - "3000:3000"
+
+  mongo:
+    image: mongo:7
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  redis:
+    image: redis:7-alpine
+    container_name: redis
+    ports:
+      - "6379:6379"
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    environment:
+      - RABBITMQ_DEFAULT_USER=user        # <<< usuário próprio
+      - RABBITMQ_DEFAULT_PASS=pass        # <<< senha própria
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    healthcheck:                           # <<< healthcheck robusto
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 10s
+
+volumes:
+  mongo-data:
