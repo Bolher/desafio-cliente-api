@@ -43,6 +43,7 @@ src/
 tests/                      # Testes unitários (use-cases e repositórios)
 
 ---
+```
 ## 🏗️ Exemplo de .env
 
 # API
@@ -115,6 +116,7 @@ Código	    Significado
 npm ci
 npm test
 
+```
 ---
 
 ##📨 Mensageria — RabbitMQ
