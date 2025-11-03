@@ -46,21 +46,21 @@ tests/                      # Testes unitários (use-cases e repositórios)
 ```
 ## 🏗️ Exemplo de .env
 
-# API
+API
 PORT=3000
 
-# MongoDB
+MongoDB
 MONGO_URI=mongodb://mongo:27017/clientesdb
 
-# Redis
+Redis
 REDIS_HOST=redis
 REDIS_PORT=6379
 
-# RabbitMQ
+RabbitMQ
 RABBITMQ_URL=amqp://user:pass@rabbitmq:5672
 RABBITMQ_QUEUE=clientes.created
 
-# Logs (opcional)
+Logs (opcional)
 LOG_LEVEL=info
 
 ---
